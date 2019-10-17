@@ -1,0 +1,121 @@
+<html>
+
+<head>
+    
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+    <script>
+
+       
+
+        function quebrarChaveNFe() {
+
+
+
+            var chave = document.getElementById("chave").value;
+
+
+            document.getElementById("cUF").value = chave.substring(0,2);
+            document.getElementById("AAMM").value = chave.substring(2,6);
+            document.getElementById("CNPJ").value = chave.substring(6,20);
+            document.getElementById("mod").value = chave.substring(20,22);
+            document.getElementById("serie").value = chave.substring(22,25);
+            document.getElementById("nNF").value = chave.substring(25,34);
+            document.getElementById("tpEmis").value = chave.substring(34,35);
+            document.getElementById("cNF").value = chave.substring(35,43);
+            document.getElementById("cDV").value = chave.substring(43,44);
+
+
+        
+
+        }
+
+    </script>
+</head>
+
+<body>
+
+    <div class="container">
+
+        <br>
+
+            <h3 class="text-center">Chave NF-e</h3>
+        <br>
+
+        <div class="row">
+            <div class="col-sm-3">
+            </div>
+            <div class="col-sm-6">
+
+
+                <div class="text-center">
+                    <input type="type" id="chave" class="form-control" onchange="quebrarChaveNFe()">
+                </div>
+
+                <hr>
+
+                <div>
+                    <small>Codigo da UF do emitente do Documento Fiscal (cUF)</small>
+                    <input class="form-control" id="cUF">
+                </div>
+
+                <div>
+                    <small>Ano e Mes de emissao da NF-e (AAMM)</small>
+                    <input class="form-control" id="AAMM">
+                </div>
+
+                <div>
+                    <small>CNPJ do emitente (CNPJ)</small>
+                    <input class="form-control" id="CNPJ">
+                </div>
+
+                <div>
+                    <small>Modelo do Documento Fiscal (mod)</small>
+                    <input class="form-control" id="mod">
+                </div>
+
+                <div>
+                    <small>Serie do Documento Fiscal (serie)</small>
+                    <input class="form-control" id="serie">
+                </div>
+
+                <div>
+                    <small>Numero do Documento Fiscal (nNF)</small>
+                    <input class="form-control" id="nNF">
+                </div>
+
+                <div>
+                    <small>Forma de emissao da NF-e (tpEmis)</small>
+                    <input class="form-control" id="tpEmis">
+                </div>
+
+                <div>
+                    <small>Codigo Numerico que compoe a Chave de Acesso (cNF)</small>
+                    <input class="form-control" id="cNF">
+                </div>
+
+                <div>
+                    <small>Digito Verificador da Chave de Acesso (cDV)</small>
+                    <input class="form-control" id="cDV">
+                </div>
+
+
+
+                <br>
+
+
+                <br>
+
+
+            </div>
+
+            <br>
+
+        </div>
+
+    </div>
+
+</body>
+
+</html>
